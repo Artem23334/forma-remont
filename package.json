@@ -1,0 +1,20 @@
+{
+  "name": "forma-remont",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Forma Remont — demonstracyjna strona firmy remontowej (Warszawa). Statyczny front + funkcja serverless Vercel dla formularza.",
+  "type": "module",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "build:strict": "node scripts/build.mjs --require-local-images",
+    "images": "node scripts/download-images.mjs && node scripts/image-sources.mjs",
+    "check": "node scripts/build.mjs && node scripts/check.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "verify": "npm run check && npm test",
+    "sources": "node scripts/image-sources.mjs"
+  }
+}
